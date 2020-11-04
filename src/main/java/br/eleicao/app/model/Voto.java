@@ -9,8 +9,8 @@ import javax.persistence.ManyToOne;
 
 @Entity
 public class Voto {
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Id //Transforma o campo em chave primária
+	@GeneratedValue(strategy = GenerationType.IDENTITY) //Cria um identity no campo = auto incremento
 	private Long Id;
 
 	@ManyToOne
@@ -20,6 +20,10 @@ public class Voto {
 	@ManyToOne
 	@JoinColumn(name = "EleitorId")
 	private Eleitor Eleitor;
+	
+	@ManyToOne
+	@JoinColumn(name = "ZonaId")
+	private Zona Zona;
 	
 	public Long getId() {
 		return Id;

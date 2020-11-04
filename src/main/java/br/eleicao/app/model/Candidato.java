@@ -7,6 +7,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Id;
 
+//Entidade
 @Entity
 public class Candidato {
 
